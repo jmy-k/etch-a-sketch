@@ -41,9 +41,13 @@ gridSizeButton.addEventListener('click',()=>{
 let j=0; 
 const randomColorButton = document.querySelector('#randomcolorbutton');
 randomColorButton.addEventListener('click',()=>{
-    console.log(j);
     j++;
-    console.log(j);
+    if (j%2!=0){
+    randomColorButton.textContent="Random Colors: On";
+    }
+    else{
+        randomColorButton.textContent="Random Colors: Off"
+    }
 })
 
 function randomColor(event){
@@ -59,11 +63,10 @@ function random_rgb() {
 }
 
 function colorIn(event){
-    console.log(j);
-    if (j===1){
+    if (j%2!=0){
         event.target.classList.add('randomcolored');
     }
-    else if (j===0){
+    else {
         event.target.classList.add('colored');
     }
 }
