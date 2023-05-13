@@ -8,20 +8,29 @@ body, .grid{
 }
 
 .grid{
+    justify-content:space-between;
     border:1px solid black;
-    max-height:500px;
-    max-width:500px;
+    height:700px;
+    width:700px;
+}
+
+.rows, .box{
+    display: flex;justify-content: space-between;flex: auto;
 }
 .rows{
-    display:flex;
-    max-width:500px;
+    width:700px;
+    min-height:2px;
 }
 
 .box{
-    border:1px dotted black;
-    min-height:25px;min-width:25px;
+    border:1px dotted grey;
+    min-height:2px;min-width:2px;
 }
 
 .colored{
     background:palevioletred;
+}
+
+.randomcolored{
+    background:red;
 }
