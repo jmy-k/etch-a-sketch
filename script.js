@@ -33,12 +33,14 @@ function gridSizePrompt(){
     }
 }
 
+// grid size button
+
 const gridSizeButton = document.querySelector('.gridsize');
 gridSizeButton.addEventListener('click',()=>{
     gridSizePrompt();
 });
 
-let j=0; 
+let j=0; // to toggle between on and off for color button
 const randomColorButton = document.querySelector('#randomcolorbutton');
 randomColorButton.addEventListener('click',()=>{
     j++;
@@ -50,10 +52,11 @@ randomColorButton.addEventListener('click',()=>{
     }
 })
 
+// not sure
 function randomColor(event){
     var randomcolor = random_rgb();
 }
-
+// function for random rgb values
 function random_rgb() {
     var num = Math.round(0xffffff * Math.random());
     var r = num >> 16;
@@ -62,12 +65,14 @@ function random_rgb() {
     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
 
+
+// hover function
 function colorIn(event){
     if (j%2!=0){
-        event.target.classList.add('randomcolored');
+        event.target.classList.add('randomcolored'); //for random colors
     }
     else {
-        event.target.classList.add('colored');
+        event.target.classList.add('colored'); //defaul color
     }
 }
 
